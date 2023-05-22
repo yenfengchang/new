@@ -5,7 +5,7 @@ import requests
 import geoip2.database
 
 # path to GeoLite2-Country.mmdb file
-reader = geoip2.database.Reader('data/GeoLite2-Country.mmdb')
+reader = geoip2.database.Reader('GeoLite2-Country.mmdb')
 
 # translations
 translations = {
@@ -28,7 +28,7 @@ translations = {
 }
 
 # read data
-df1=pd.read_csv("data/TWSE_TW-1.csv")
+df1=pd.read_csv("TWSE_TW-1.csv")
 df1.fillna('', inplace=True)
 # set up state
 state = st.session_state
